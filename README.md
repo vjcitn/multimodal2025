@@ -6,7 +6,9 @@ Some resources for exploring multimodal LLMs
 
 ![](mcmicro1.png)
 
-Quick dialogue with `llama3.2-vision:latest      6f2f9757ae97`
+### Quick dialogue with `llama3.2-vision:latest      6f2f9757ae97`
+
+#### The interchange
 
 ```
 >>> The image at https://github.com/vjcitn/multimodal2025/blob/main/mcmicro1.png includes a legend for color coding cell
@@ -45,3 +47,48 @@ movement are occurring in the tissue.
 These patterns are likely indicative of the complex, dynamic behavior of cells in a living tissue, and may be 
 related to immune responses, tissue development, or other biological processes.
 ```
+
+### Interpretation
+
+This model is unable to decode the text of the legend without extensive prompting.  The
+pattern analysis is reasonable.
+
+### Quick dialogue with perplexity.ai using Claude 4.0 Sonnet
+
+I uploaded the mcmicro1.png and it was able to extract the cell types in legend accurately.
+
+I uploaded "nolegend.png" and asked "What patterns are present in the image?  Do certain cell types cluster together more than others?"
+
+
+---
+Answer from Perplexity: pplx.ai/share
+Looking at this spatial cell distribution image, several distinct patterns emerge:
+
+## **Epithelial Cell Organization**
+The olive green epithelial cells form highly organized, elongated tubular or crypt-like structures. These structures appear to be:
+- **Branching and interconnected**, creating a network of tubular formations
+- **Consistently shaped**, suggesting they represent functional tissue units like intestinal crypts or glandular ducts
+- **Spatially coherent**, maintaining their structural integrity rather than being randomly scattered
+
+## **Stromal Distribution**
+The blue stromal cells show a complementary distribution pattern:
+- **Concentrated heavily in the lower portion** of the tissue section
+- **Filling interstitial spaces** between the epithelial structures
+- **Supporting the epithelial architecture** by occupying the spaces around and between the tubular formations
+
+## **Tissue Architecture**
+The overall pattern reveals:
+- **Clear compartmentalization** between epithelial and stromal regions
+- **Organized tissue architecture** that resembles intestinal or glandular tissue, where epithelial cells form functional units (crypts/ducts) supported by stromal framework
+- **Non-random spatial organization**, indicating this represents normal tissue architecture rather than disorganized pathological tissue
+
+## **Additional Cell Types**
+Other colored cells (pink, magenta, and additional colors) are scattered throughout but appear to be:
+- **Less abundant** than the dominant epithelial and stromal populations
+- **Distributed both within and around** the epithelial structures, possibly representing immune cells, endothelial cells, or other tissue components
+
+This pattern is characteristic of well-organized epithelial tissue, likely intestinal mucosa with crypt structures supported by stromal elements.
+
+Citations:
+[1] https://pplx-res.cloudinary.com/image/private/user_uploads/6746978/ea220fdd-2b74-4e13-bd64-e4460cacd71d/nolegend.jpg
+
